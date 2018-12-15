@@ -20,10 +20,10 @@ public synchronized void depositarCaracter (char c) {
 				wait();//tendremos que esperar para depositar un nuevo caracter
 			}catch (InterruptedException e) {
 				System.out.println(e);
-			}//una vez que se vacíe, ya podremos depositarlo.
-			System.out.println("Depositando el carácter "+c+" en el buffer.");
-			buffer.add(c);
-		}
+			}
+		}//una vez que se vacíe, ya podremos depositarlo.
+		System.out.println("Depositando el carácter "+c+" en el buffer.");
+		buffer.add(c);
 	}else {
 		System.out.println("Depositando el carácter "+c+" en el buffer.");
 		buffer.add(c);
@@ -98,18 +98,9 @@ public void run () {
 
 ```
 ## Ejecución:
-Pruebo su ejecución con los archivos compilados que se encuentran en el directorio /bin - en mi caso.
+Pruebo su ejecución.
 
-![Captura de pantalla]()
-
-Y creando *.jar 
-
-![Captura creando jar]()
-
-Ejecutándolo...
-
-![Captura ejecutando jar]()
-
+![Captura de pantalla](http://subirimagen.me/uploads/20181215114442.png)
 
 
 ## Meta
