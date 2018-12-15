@@ -19,7 +19,6 @@ public class HiloConsumidor extends Thread{
 		}catch (InterruptedException e) {
 			System.out.println(e);
 		}
-		
-		
+				
 	}
 }

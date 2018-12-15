@@ -3,7 +3,6 @@ package ejercicio1;
 import java.util.ArrayList;
 
 public class BufferCompartido {
-
 	
 	private ArrayList<Character> buffer;
 	private final int capacidad = 6;

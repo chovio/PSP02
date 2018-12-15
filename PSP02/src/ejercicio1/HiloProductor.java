@@ -21,8 +21,7 @@ private BufferCompartido buffer;
 		}catch (InterruptedException e) {
 			System.out.println(e);
 		}
-		
-		
+				
 	}
 	
 	public Character generarCaracter() {
