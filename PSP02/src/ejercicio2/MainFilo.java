@@ -11,7 +11,7 @@ public class MainFilo {
 	    Filosofo[] filosofos = new Filosofo[5];
 
 	    for (int i = 0; i < palillos.length; i++) {
-	        palillos[i] = new Semaphore(1);//Constructor con id palillo.
+	        palillos[i] = new Semaphore(1);
 	    }
 
 	    for (int i = 0; i < filosofos.length; i++) {
@@ -19,9 +19,7 @@ public class MainFilo {
 	        new Filosofo(i, palillos).start();
 	        
 	    }
-		
-		
-		
+						
 	}
 
 }

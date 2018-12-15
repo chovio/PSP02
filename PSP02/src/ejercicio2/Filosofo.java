@@ -14,15 +14,17 @@ public class Filosofo extends Thread{
 		
 		this.id = id;
 		this.semaforoPalillo = semaforoPalillo;
+		//El id del Filósofo, coincide con el del palillo izquierdo. El derecho será el siguiente.
 		this.izq = id;
 		if(id == semaforoPalillo.length - 1) {//4
 			this.dcho = 0;
-		}else this.dcho = id+1;
+		}else {
+			this.dcho = id+1;
+		}
 		
 	}
-	
+	@Override
 	public void run () {
-		
 		
 		while(true) { //bucle infinito
 			try {
@@ -33,11 +35,7 @@ public class Filosofo extends Thread{
 			}catch(InterruptedException e) {
 				System.out.println(e);
 			}
-				
-			
-			
 		}
-		
 	}
 	
 	public void comer() {
@@ -53,13 +51,14 @@ public class Filosofo extends Thread{
 						System.out.println(e);
 					}
 					System.out.println("Filósofo nº "+id+" deja palillos "+izq+" y "+dcho+ ".");
-					semaforoPalillo[dcho].release();
-					semaforoPalillo[izq].release();
+					semaforoPalillo[dcho].release();//El palillo pos dcho libera el permiso.
+					semaforoPalillo[izq].release();//El palillo pos izq libera el permiso.
 					//si ya comió, que se ponga a pensar.
 					
-				}
-				
-			}else semaforoPalillo[izq].release();
+				}else {
+					semaforoPalillo[izq].release();
+					}
+			}
 		}
 	}
 
