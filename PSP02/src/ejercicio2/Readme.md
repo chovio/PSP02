@@ -65,11 +65,19 @@ public void pensar() {
 
 ```
 
+En cuanto a problemas de inanición lo he intentado resolver añadiendo los sleep con tiempos aleatorios, de modo que sea prácticamente imposible que a todos los filósofos les entre hambre al mismo tiempo (como en la vida real).
+
+
 ## Ejecución:
 Pruebo su ejecución.
 
 ![Captura de pantalla](http://subirimagen.me/uploads/20181215114948.png)
 
+Como se puede apreciar, mientras se están usando X palillos, otros no pueden comer:
+
+![Captura de pantalla](http://subirimagen.me/uploads/20181215115151.png)
+
+Ahí vemos que el filósofo 1 necesita los palillos 1 y 2, pero el palillo 1 está siendo usado por el filósofo 0, por lo que tiene que esperar a que éste los deje sobre la mesa.
 
 ## Meta
 
