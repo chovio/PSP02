@@ -22,10 +22,12 @@ public class BufferCompartido {
 				}catch (InterruptedException e) {
 					System.out.println(e);
 				}
-				System.out.println("Depositando el carácter "+c+" en el buffer.");
-				buffer.add(c);
-			}
-		}else {
+				
+				
+			}//Al finalizar el bucle
+			System.out.println("Depositando el carácter "+c+" en el buffer.");
+			buffer.add(c);
+		}else if(buffer.size()<capacidad){
 			System.out.println("Depositando el carácter "+c+" en el buffer.");
 			buffer.add(c);
 		}
